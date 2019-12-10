@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 7962023931677770212}
+  spriteCell: {fileID: 2176268247934688609}
 --- !u!1 &3735856219867194726
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IPlayer
 {
-    void Move();
     void FindStroke();
+    void SuggestStroke(int tempX, int tempY);
 }
