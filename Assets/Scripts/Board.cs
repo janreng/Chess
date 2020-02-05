@@ -14,11 +14,11 @@ public class Board : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                Vector3 tempPosition = new Vector3(i, j, 0);
-                Slot cell = Instantiate(Resources.Load<Slot>("Prefabs/Slot"), tempPosition, Quaternion.identity, this.transform);
+                Vector3 tempPosition = new Vector3(i, 0, j);
+                Slot cell = Instantiate(Resources.Load<Slot>("Prefabs/Cell"), tempPosition, Quaternion.identity, this.transform);
                 listCell.Add(cell);
-                GameManager.instance.boardGame = new int[width, height];
-                GameManager.instance.ShowBoardText();
+                //GameManager.instance.boardGame = new int[width, height];
+                //GameManager.instance.ShowBoardText();
             }
         }
         //this.PostEvent(EventID.InitBoardSuccess);
