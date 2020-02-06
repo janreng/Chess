@@ -14,14 +14,14 @@ public class SelectLanguageView : Window
 
     protected override void OnCreate(IBundle bundle)
     {
-        //BindingSet<SelectLanguageView, SelectLanguageViewModel> bindingSet = this.CreateBindingSet<SelectLanguageView, SelectLanguageViewModel>();
+        BindingSet<SelectLanguageView, SelectLanguageViewModel> bindingSet = this.CreateBindingSet<SelectLanguageView, SelectLanguageViewModel>();
 
-        //// binding interaction request
-        //bindingSet.Bind().For(v => v.OnClosePopup).To(vm => vm.ClosePopupRequest);
+        // binding interaction request
+        bindingSet.Bind().For(v => v.OnClosePopup).To(vm => vm.ClosePopupRequest);
 
-        //// binding command
-        //bindingSet.Bind(this.variables.Get<Button>("button_close")).For(v => v.onClick).To(vm => vm.ClosePopupCommand);
-        //bindingSet.Build();
+        // binding command
+        bindingSet.Bind(this.variables.Get<Button>("btn_close")).For(v => v.onClick).To(vm => vm.ClosePopupCommand);
+        bindingSet.Build();
     }
 
     public void OnClosePopup(object sender, InteractionEventArgs args)

@@ -23,7 +23,10 @@ public class LoadingGameViewModel : ViewModelBase
         {
             Debug.Log("select Language");
             this.selectLanguageCommand.Enabled = false;
-            this.selectLanguageRequest.Raise(selectLanguageViewModel);
+            this.selectLanguageRequest.Raise(selectLanguageViewModel, vm => 
+            {
+                this.selectLanguageCommand.Enabled = true;
+            });
         });
 
         this.tapToStartCommand = new SimpleCommand(() =>

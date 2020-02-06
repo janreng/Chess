@@ -37,12 +37,25 @@ public class LoadingGameView : Window
     public void OnOpenPopupSelectLanguage(object sender, InteractionEventArgs args)
     {
         Debug.Log("Open Popup select language");
-        SelectLanguageView loginWindow = viewLocator.LoadWindow<SelectLanguageView>(this.WindowManager, "UI/popup_language");
+        SelectLanguageView selectLanguageView = viewLocator.LoadWindow<SelectLanguageView>(this.WindowManager, "UI/popup_language");
+        var callback = args.Callback;
         var loginViewModel = args.Context;
 
-        loginWindow.SetDataContext(loginViewModel);
-        loginWindow.Create();
-        loginWindow.Show();
+        if (callback != null)
+        {
+            EventHandler handler = null;
+            handler = (window, e) =>
+            {
+                selectLanguageView.OnDismissed -= handler;
+                if (callback != null)
+                    callback();
+            };
+            selectLanguageView.OnDismissed += handler;
+        }
+
+        selectLanguageView.SetDataContext(loginViewModel);
+        selectLanguageView.Create();
+        selectLanguageView.Show();
     }
 
     public void OnTapToStart(object sender, InteractionEventArgs args)

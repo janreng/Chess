@@ -16,7 +16,7 @@ public class SelectLanguageViewModel : ViewModelBase
 
         this.closePopupCommand = new SimpleCommand(() =>
         {
-            this.closePopupCommand.Enabled = false;
+            this.closePopupCommand.Enabled = true;
             this.closePopupRequest.Raise();
         });
     }
