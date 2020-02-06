@@ -519,7 +519,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8148350128135817732}
   - component: {fileID: 296193537}
-  - component: {fileID: 296193535}
   - component: {fileID: 296193536}
   m_Layer: 5
   m_Name: popup_loading
@@ -563,28 +562,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &296193535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8099504118870487805}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7dfc47bd423ca43a53d119717e166c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variables:
-    variables:
-    - name: select_language
-      objectValue: {fileID: 772838631}
-      dataValue: 
-      variableType: 2
-    - name: tap_to_start
-      objectValue: {fileID: 1153806043}
-      dataValue: 
-      variableType: 2
 --- !u!114 &296193536
 MonoBehaviour:
   m_ObjectHideFlags: 0

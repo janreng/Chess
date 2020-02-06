@@ -4,6 +4,7 @@ using Loxodon.Framework.Contexts;
 using Loxodon.Framework.Interactivity;
 using Loxodon.Framework.Views;
 using Loxodon.Framework.Views.Variables;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,6 +38,9 @@ public class LoadingGameView : Window
     {
         Debug.Log("Open Popup select language");
         SelectLanguageView loginWindow = viewLocator.LoadWindow<SelectLanguageView>(this.WindowManager, "UI/popup_language");
+        var loginViewModel = args.Context;
+
+        loginWindow.SetDataContext(loginViewModel);
         loginWindow.Create();
         loginWindow.Show();
     }

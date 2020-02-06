@@ -37,9 +37,8 @@ public class LanguageElementViewModel : ViewModelBase
 
 public class LanguageElement : UIView
 {
-    public VariableArray variables;
-    [HideInInspector]
     public SystemLanguage language;
+    public VariableArray variables;
     [HideInInspector]
     public LanguageElementViewModel viewModel;
 

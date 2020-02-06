@@ -12,13 +12,9 @@ public class SelectLanguageView : Window
 {
     public VariableArray variables;
 
-    private SelectLanguageViewModel viewModel;
-
     protected override void OnCreate(IBundle bundle)
     {
-        //this.viewModel = new SelectLanguageViewModel();
-
-        //BindingSet<SelectLanguageView, SelectLanguageViewModel> bindingSet = this.CreateBindingSet(viewModel);
+        //BindingSet<SelectLanguageView, SelectLanguageViewModel> bindingSet = this.CreateBindingSet<SelectLanguageView, SelectLanguageViewModel>();
 
         //// binding interaction request
         //bindingSet.Bind().For(v => v.OnClosePopup).To(vm => vm.ClosePopupRequest);

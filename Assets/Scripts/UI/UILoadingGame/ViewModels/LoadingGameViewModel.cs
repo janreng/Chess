@@ -18,11 +18,11 @@ public class LoadingGameViewModel : ViewModelBase
         this.selectLanguageRequest = new InteractionRequest<SelectLanguageViewModel>(this);
         this.tapToStartRequest = new InteractionRequest(this);
 
+        SelectLanguageViewModel selectLanguageViewModel = new SelectLanguageViewModel();
         this.selectLanguageCommand = new SimpleCommand(() =>
         {
             Debug.Log("select Language");
             this.selectLanguageCommand.Enabled = false;
-            SelectLanguageViewModel selectLanguageViewModel = new SelectLanguageViewModel();
             this.selectLanguageRequest.Raise(selectLanguageViewModel);
         });
 
