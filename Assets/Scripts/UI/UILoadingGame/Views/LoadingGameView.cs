@@ -46,11 +46,11 @@ public class LoadingGameView : Window
             EventHandler handler = null;
             handler = (window, e) =>
             {
-                selectLanguageView.OnDismissed -= handler;
+                selectLanguageView.VisibilityChanged -= handler;
                 if (callback != null)
                     callback();
             };
-            selectLanguageView.OnDismissed += handler;
+            selectLanguageView.VisibilityChanged += handler;
         }
 
         selectLanguageView.SetDataContext(loginViewModel);

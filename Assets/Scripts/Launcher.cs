@@ -12,6 +12,8 @@ public class Launcher : MonoBehaviour
 {
     private ApplicationContext context;
 
+    public GameObject[] listPopup;
+
     private void Awake()
     {
         GlobalWindowManager windowManager = FindObjectOfType<GlobalWindowManager>();
@@ -45,5 +47,10 @@ public class Launcher : MonoBehaviour
         LoadingGameView window = locator.LoadWindow<LoadingGameView>(winContainer, "UI/popup_loading");
         window.Create();
         window.Show();
+
+        for (int i = 0; i < listPopup.Length; i++)
+        {
+            SmartPool.Instance.Preload(listPopup[i], 1);
+        }
     }
 }

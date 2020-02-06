@@ -8,6 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class SelectLanguageView : Window
 {
     public VariableArray variables;
@@ -26,6 +27,6 @@ public class SelectLanguageView : Window
 
     public void OnClosePopup(object sender, InteractionEventArgs args)
     {
-        this.Dismiss();
+        this.Hide();
     }
 }

@@ -23,7 +23,7 @@ MonoBehaviour:
       type: 8
       value:
         dataValue: 
-        objectValue: {fileID: 21300000, guid: d7505db94a1adea40ac790a77bd0c5c1, type: 3}
+        objectValue: {fileID: 21300000, guid: b5ccccd65ecf07948afd42e4657a6d1e, type: 3}
     - key: tap_to_start
       type: 0
       value:
