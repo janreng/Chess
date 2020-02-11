@@ -41,7 +41,7 @@ public class Launcher : MonoBehaviour
     private void Start()
     {
         /* Create a window container */
-        WindowContainer winContainer = WindowContainer.Create("MAIN");
+        WindowContainer winContainer = WindowContainer.Create("main");
 
         IUIViewLocator locator = context.GetService<IUIViewLocator>();
         LoadingGameView window = locator.LoadWindow<LoadingGameView>(winContainer, "UI/popup_loading");

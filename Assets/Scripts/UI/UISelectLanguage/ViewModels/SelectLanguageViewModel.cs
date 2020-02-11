@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class SelectLanguageViewModel : ViewModelBase
 {
+    private List<SystemLanguage> systemLanguages = new List<SystemLanguage>();
+
     private InteractionRequest closePopupRequest;
     private SimpleCommand closePopupCommand;
 
@@ -19,6 +21,19 @@ public class SelectLanguageViewModel : ViewModelBase
             this.closePopupCommand.Enabled = true;
             this.closePopupRequest.Raise();
         });
+
+        InitSystemLanguage();
+    }
+
+    public void InitSystemLanguage()
+    {
+        systemLanguages.Add(SystemLanguage.English);
+        systemLanguages.Add(SystemLanguage.Vietnamese);
+    }
+
+    public List<SystemLanguage> GetSystemLanguages()
+    {
+        return systemLanguages;
     }
 
     public IInteractionRequest ClosePopupRequest { get { return this.closePopupRequest; } }

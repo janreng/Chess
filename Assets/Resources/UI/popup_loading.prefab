@@ -585,6 +585,11 @@ MonoBehaviour:
       objectValue: {fileID: 1153806043}
       dataValue: 
       variableType: 2
+    - name: loading_game
+      objectValue: {fileID: 7930513301521999008, guid: 56fda666db039ad4cb8c868877421871,
+        type: 3}
+      dataValue: 
+      variableType: 1
 --- !u!1 &9111771557917327423
 GameObject:
   m_ObjectHideFlags: 0
